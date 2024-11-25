@@ -1,0 +1,105 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.col-xl-3 {
+  flex: 0 1 calc(25% - 20px);
+  text-align: center;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: whitesmoke;
+}
+
+.col-xl-3:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.col-xl-3 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.col-xl-3 img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border-radius: white;
+}
+
+.col-xl-3 h4 {
+  font-size: 1.25rem;
+  margin-top: 15px;
+  color: #fafafa;
+  font-weight: 600;
+}
+
+.col-xl-3 p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.pagenation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.pagenation .btn {
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
+}
+
+.pagenation .btn-danger {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+}
+
+.pagenation .btn-danger:hover {
+  background-color: #d4080a;
+  transform: scale(1.05);
+}
+
+.pagenation .btn:disabled {
+  background-color: #f1f1f1;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+  .col-xl-3 {
+    flex: 0 1 calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .col-xl-3 {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .col-xl-3 {
+    flex: 0 1 calc(100% - 20px);
+  }
+}
